@@ -107,6 +107,9 @@ if(isset($_POST['type']))
 	//$link = $qr->get_link();
 	//$qr->download_image($link);
 
+    $log->debug($mem_use);
+    $log->debug($mem_peak);
+
 }
 
 ?>
