@@ -1,0 +1,779 @@
+TRACE START [2020-09-21 17:57:09]
+    0.0006     445424  +445424   -> {main}() /var/www/mysite.local/index.php:0
+    0.0007     446552    +1128     -> require_once(/var/www/mysite.local/vendor/autoload.php) /var/www/mysite.local/index.php:2
+    0.0010     455808    +9256       -> require_once(/var/www/mysite.local/vendor/composer/autoload_real.php) /var/www/mysite.local/vendor/autoload.php:5
+    0.0010     455456     -352       -> ComposerAutoloaderInit5658bc0468aa8a6fe283d4f863b7058b::getLoader() /var/www/mysite.local/vendor/autoload.php:7
+    0.0010     455456       +0         -> spl_autoload_register(array (0 => 'ComposerAutoloaderInit5658bc0468aa8a6fe283d4f863b7058b', 1 => 'loadClassLoader'), TRUE, TRUE) /var/www/mysite.local/vendor/composer/autoload_real.php:25
+    0.0010     455976                  >=> TRUE
+    0.0010     456352     +896         -> spl_autoload_call('Composer\\Autoload\\ClassLoader') /var/www/mysite.local/vendor/composer/autoload_real.php:26
+    0.0010     456408      +56           -> ComposerAutoloaderInit5658bc0468aa8a6fe283d4f863b7058b::loadClassLoader($class = 'Composer\\Autoload\\ClassLoader') /var/www/mysite.local/vendor/composer/autoload_real.php:26
+    0.0013     504936   +48528             -> require(/var/www/mysite.local/vendor/composer/ClassLoader.php) /var/www/mysite.local/vendor/composer/autoload_real.php:12
+    0.0014     504488                    >=> NULL
+    0.0014     504432                  >=> NULL
+    0.0014     504656       +0         -> spl_autoload_unregister(array (0 => 'ComposerAutoloaderInit5658bc0468aa8a6fe283d4f863b7058b', 1 => 'loadClassLoader')) /var/www/mysite.local/vendor/composer/autoload_real.php:27
+    0.0014     504512                  >=> TRUE
+    0.0014     504512     -144         -> function_exists('zend_loader_file_encoded') /var/www/mysite.local/vendor/composer/autoload_real.php:29
+    0.0014     504512                  >=> FALSE
+    0.0014     510504    +5992         -> require_once(/var/www/mysite.local/vendor/composer/autoload_static.php) /var/www/mysite.local/vendor/composer/autoload_real.php:31
+    0.0014     510120     -384         -> Composer\Autoload\ComposerStaticInit5658bc0468aa8a6fe283d4f863b7058b::getInitializer($loader = class Composer\Autoload\ClassLoader { private $prefixLengthsPsr4 = array (); private $prefixDirsPsr4 = array (); private $fallbackDirsPsr4 = array (); private $prefixesPsr0 = array (); private $fallbackDirsPsr0 = array (); private $useIncludePath = FALSE; private $classMap = array (); private $classMapAuthoritative = FALSE; private $missingClasses = array (); private $apcuPrefix = NULL }) /var/www/mysite.local/vendor/composer/autoload_real.php:33
+    0.0015     511512    +1392           -> Closure::bind(class Closure { public $static = array ('loader' => class Composer\Autoload\ClassLoader { ... }) }, NULL, 'Composer\\Autoload\\ClassLoader') /var/www/mysite.local/vendor/composer/autoload_static.php:37
+    0.0015     512288                    >=> class Closure { public $static = array ('loader' => class Composer\Autoload\ClassLoader { ... }) }
+    0.0015     511592                  >=> class Closure { public $static = array ('loader' => class Composer\Autoload\ClassLoader { ... }) }
+    0.0015     511592      +80         -> Composer\Autoload\ClassLoader::Composer\Autoload\{closure:/var/www/mysite.local/vendor/composer/autoload_static.php:33-37}() /var/www/mysite.local/vendor/composer/autoload_real.php:33
+    0.0015     510816     -776         -> Composer\Autoload\ClassLoader->register($prepend = TRUE) /var/www/mysite.local/vendor/composer/autoload_real.php:51
+    0.0015     511192     +376           -> spl_autoload_register(array (0 => class Composer\Autoload\ClassLoader { private $prefixLengthsPsr4 = array (...); private $prefixDirsPsr4 = array (...); private $fallbackDirsPsr4 = array (...); private $prefixesPsr0 = array (...); private $fallbackDirsPsr0 = array (...); private $useIncludePath = FALSE; private $classMap = array (...); private $classMapAuthoritative = FALSE; private $missingClasses = array (...); private $apcuPrefix = NULL }, 1 => 'loadClass'), TRUE, TRUE) /var/www/mysite.local/vendor/composer/ClassLoader.php:302
+    0.0015     511320                    >=> TRUE
+    0.0015     510944                >=> class Composer\Autoload\ClassLoader { private $prefixLengthsPsr4 = array ('P' => array (...), 'M' => array (...)); private $prefixDirsPsr4 = array ('Psr\Log\' => array (...), 'Monolog\' => array (...)); private $fallbackDirsPsr4 = array (); private $prefixesPsr0 = array (); private $fallbackDirsPsr0 = array (); private $useIncludePath = FALSE; private $classMap = array (); private $classMapAuthoritative = FALSE; private $missingClasses = array (); private $apcuPrefix = NULL }
+    0.0016     510216     -976     -> error_reporting(32767) /var/www/mysite.local/index.php:4
+    0.0016     510624              >=> 22527
+    0.0016     510624     +408     -> ini_set('display_errors', 1) /var/www/mysite.local/index.php:5
+    0.0016     510624              >=> ''
+    0.0016     510656      +32     -> memory_get_usage() /var/www/mysite.local/index.php:11
+    0.0016     510656              >=> 510656
+    0.0016     510656       +0     -> memory_get_peak_usage() /var/www/mysite.local/index.php:12
+    0.0016     510656              >=> 587528
+    0.0016     510656       +0     -> spl_autoload_call('Monolog\\Logger') /var/www/mysite.local/index.php:15
+    0.0016     510696      +40       -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Logger') /var/www/mysite.local/index.php:15
+    0.0016     510696       +0         -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Logger') /var/www/mysite.local/vendor/composer/ClassLoader.php:321
+    0.0016     510696       +0           -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Logger', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:351
+    0.0016     510696       +0             -> strtr('Monolog\\Logger', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0016     510736                      >=> 'Monolog/Logger'
+    0.0016     510744      +48             -> strrpos('Monolog\\Logger', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0017     510744                      >=> 7
+    0.0017     510744       +0             -> substr('Monolog\\Logger', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0017     510776                      >=> 'Monolog'
+    0.0017     510816      +72             -> substr('Monolog/Logger.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:382
+    0.0017     510856                      >=> 'Logger.php'
+    0.0017     510968     +152             -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Logger.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:384
+    0.0017     510968                      >=> TRUE
+    0.0017     510808                    >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Logger.php'
+    0.0017     510808                  >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Logger.php'
+    0.0017     510808     -160         -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Logger.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:322
+    0.0021     583112   +72304           -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:444
+    0.0021     583112       +0             -> spl_autoload_call('Psr\\Log\\LoggerInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:28
+    0.0022     583160      +48               -> Composer\Autoload\ClassLoader->loadClass($class = 'Psr\\Log\\LoggerInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:28
+    0.0022     583160       +0                 -> Composer\Autoload\ClassLoader->findFile($class = 'Psr\\Log\\LoggerInterface') /var/www/mysite.local/vendor/composer/ClassLoader.php:321
+    0.0022     583160       +0                   -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Psr\\Log\\LoggerInterface', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:351
+    0.0022     583160       +0                     -> strtr('Psr\\Log\\LoggerInterface', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0022     583208                              >=> 'Psr/Log/LoggerInterface'
+    0.0022     583216      +56                     -> strrpos('Psr\\Log\\LoggerInterface', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0022     583216                              >=> 7
+    0.0022     583216       +0                     -> substr('Psr\\Log\\LoggerInterface', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0022     583248                              >=> 'Psr\\Log'
+    0.0022     583288      +72                     -> substr('Psr/Log/LoggerInterface.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:382
+    0.0022     583336                              >=> 'LoggerInterface.php'
+    0.0022     583448     +160                     -> file_exists('/var/www/mysite.local/vendor/composer/../psr/log/Psr/Log/LoggerInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:384
+    0.0022     583448                              >=> TRUE
+    0.0022     583272                            >=> '/var/www/mysite.local/vendor/composer/../psr/log/Psr/Log/LoggerInterface.php'
+    0.0022     583272                          >=> '/var/www/mysite.local/vendor/composer/../psr/log/Psr/Log/LoggerInterface.php'
+    0.0022     583272     -176                 -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../psr/log/Psr/Log/LoggerInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:322
+    0.0023     591576    +8304                   -> include(/var/www/mysite.local/vendor/psr/log/Psr/Log/LoggerInterface.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:444
+    0.0023     591080                        >=> TRUE
+    0.0023     591032                      >=> NULL
+    0.0023     591040     -536             -> spl_autoload_call('Monolog\\ResettableInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:28
+    0.0023     591096      +56               -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\ResettableInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:28
+    0.0023     591096       +0                 -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\ResettableInterface') /var/www/mysite.local/vendor/composer/ClassLoader.php:321
+    0.0023     591096       +0                   -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\ResettableInterface', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:351
+    0.0023     591096       +0                     -> strtr('Monolog\\ResettableInterface', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0024     591152                              >=> 'Monolog/ResettableInterface'
+    0.0024     591152      +56                     -> strrpos('Monolog\\ResettableInterface', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0024     591152                              >=> 7
+    0.0024     591152       +0                     -> substr('Monolog\\ResettableInterface', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0024     591184                              >=> 'Monolog'
+    0.0024     591224      +72                     -> substr('Monolog/ResettableInterface.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:382
+    0.0024     591272                              >=> 'ResettableInterface.php'
+    0.0024     591408     +184                     -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/ResettableInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:384
+    0.0024     591408                              >=> TRUE
+    0.0024     591224                            >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/ResettableInterface.php'
+    0.0024     591224                          >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/ResettableInterface.php'
+    0.0024     591224     -184                 -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/ResettableInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:322
+    0.0024     593120    +1896                   -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/ResettableInterface.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:444
+    0.0024     592608                        >=> TRUE
+    0.0024     592552                      >=> NULL
+    0.0024     591704                >=> TRUE
+    0.0024     591664              >=> NULL
+    0.0025     591176    -1944     -> Monolog\Logger->__construct($name = 'Memory usage', $handlers = ???, $processors = ???) /var/www/mysite.local/index.php:15
+    0.0025     591176       +0       -> Monolog\Logger->setHandlers($handlers = array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:150
+    0.0025     591176       +0         -> array_reverse(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:213
+    0.0025     591232                  >=> array ()
+    0.0025     591176       +0     -> spl_autoload_call('Monolog\\Handler\\StreamHandler') /var/www/mysite.local/index.php:16
+    0.0025     591232      +56       -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Handler\\StreamHandler') /var/www/mysite.local/index.php:16
+    0.0025     591232       +0         -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Handler\\StreamHandler') /var/www/mysite.local/vendor/composer/ClassLoader.php:321
+    0.0025     591232       +0           -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Handler\\StreamHandler', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:351
+    0.0025     591232       +0             -> strtr('Monolog\\Handler\\StreamHandler', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0025     591288                      >=> 'Monolog/Handler/StreamHandler'
+    0.0025     591296      +64             -> strrpos('Monolog\\Handler\\StreamHandler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0025     591296                      >=> 15
+    0.0025     591296       +0             -> substr('Monolog\\Handler\\StreamHandler', 0, 15) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0025     591336                      >=> 'Monolog\\Handler'
+    0.0025     591384      +88             -> strrpos('Monolog\\Handler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0025     591384                      >=> 7
+    0.0025     591384       +0             -> substr('Monolog\\Handler', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0025     591416                      >=> 'Monolog'
+    0.0026     591368      -16             -> substr('Monolog/Handler/StreamHandler.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:382
+    0.0026     591424                      >=> 'Handler/StreamHandler.php'
+    0.0026     591552     +184             -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/StreamHandler.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:384
+    0.0026     591552                      >=> TRUE
+    0.0026     591360                    >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/StreamHandler.php'
+    0.0026     591360                  >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/StreamHandler.php'
+    0.0026     591360     -192         -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/StreamHandler.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:322
+    0.0028     620584   +29224           -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:444
+    0.0028     620584       +0             -> spl_autoload_call('Monolog\\Handler\\AbstractProcessingHandler') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:24
+    0.0028     620664      +80               -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Handler\\AbstractProcessingHandler') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:24
+    0.0028     620664       +0                 -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Handler\\AbstractProcessingHandler') /var/www/mysite.local/vendor/composer/ClassLoader.php:321
+    0.0028     620664       +0                   -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Handler\\AbstractProcessingHandler', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:351
+    0.0028     620664       +0                     -> strtr('Monolog\\Handler\\AbstractProcessingHandler', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0028     620744                              >=> 'Monolog/Handler/AbstractProcessingHandler'
+    0.0028     620744      +80                     -> strrpos('Monolog\\Handler\\AbstractProcessingHandler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0028     620744                              >=> 15
+    0.0028     620744       +0                     -> substr('Monolog\\Handler\\AbstractProcessingHandler', 0, 15) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0028     620784                              >=> 'Monolog\\Handler'
+    0.0029     620832      +88                     -> strrpos('Monolog\\Handler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0029     620832                              >=> 7
+    0.0029     620832       +0                     -> substr('Monolog\\Handler', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0029     620864                              >=> 'Monolog'
+    0.0029     620816      -16                     -> substr('Monolog/Handler/AbstractProcessingHandler.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:382
+    0.0029     620880                              >=> 'Handler/AbstractProcessingHandler.php'
+    0.0029     621040     +224                     -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:384
+    0.0029     621040                              >=> TRUE
+    0.0029     620824                            >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php'
+    0.0029     620824                          >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php'
+    0.0029     620824     -216                 -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:322
+    0.0030     626208    +5384                   -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:444
+    0.0030     626208       +0                     -> spl_autoload_call('Monolog\\Handler\\AbstractHandler') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:24
+    0.0030     626264      +56                       -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Handler\\AbstractHandler') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:24
+    0.0030     626264       +0                         -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Handler\\AbstractHandler') /var/www/mysite.local/vendor/composer/ClassLoader.php:321
+    0.0030     626264       +0                           -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Handler\\AbstractHandler', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:351
+    0.0030     626264       +0                             -> strtr('Monolog\\Handler\\AbstractHandler', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0030     626320                                      >=> 'Monolog/Handler/AbstractHandler'
+    0.0030     626328      +64                             -> strrpos('Monolog\\Handler\\AbstractHandler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0030     626328                                      >=> 15
+    0.0030     626328       +0                             -> substr('Monolog\\Handler\\AbstractHandler', 0, 15) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0030     626368                                      >=> 'Monolog\\Handler'
+    0.0030     626416      +88                             -> strrpos('Monolog\\Handler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0030     626416                                      >=> 7
+    0.0030     626416       +0                             -> substr('Monolog\\Handler', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0030     626448                                      >=> 'Monolog'
+    0.0030     626400      -16                             -> substr('Monolog/Handler/AbstractHandler.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:382
+    0.0030     626456                                      >=> 'Handler/AbstractHandler.php'
+    0.0030     626584     +184                             -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractHandler.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:384
+    0.0030     626584                                      >=> TRUE
+    0.0031     626392                                    >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractHandler.php'
+    0.0031     626392                                  >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractHandler.php'
+    0.0031     626392     -192                         -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/AbstractHandler.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:322
+    0.0032     641544   +15152                           -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:444
+    0.0032     641544       +0                             -> spl_autoload_call('Monolog\\Handler\\HandlerInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:24
+    0.0032     641608      +64                               -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Handler\\HandlerInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:24
+    0.0032     641608       +0                                 -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Handler\\HandlerInterface') /var/www/mysite.local/vendor/composer/ClassLoader.php:321
+    0.0032     641608       +0                                   -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Handler\\HandlerInterface', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:351
+    0.0032     641608       +0                                     -> strtr('Monolog\\Handler\\HandlerInterface', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0032     641672                                              >=> 'Monolog/Handler/HandlerInterface'
+    0.0032     641672      +64                                     -> strrpos('Monolog\\Handler\\HandlerInterface', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0032     641672                                              >=> 15
+    0.0032     641672       +0                                     -> substr('Monolog\\Handler\\HandlerInterface', 0, 15) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0032     641712                                              >=> 'Monolog\\Handler'
+    0.0032     641760      +88                                     -> strrpos('Monolog\\Handler', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0032     641760                                              >=> 7
+    0.0032     641760       +0                                     -> substr('Monolog\\Handler', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0032     641792                                              >=> 'Monolog'
+    0.0033     641744      -16                                     -> substr('Monolog/Handler/HandlerInterface.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:382
+    0.0033     641800                                              >=> 'Handler/HandlerInterface.php'
+    0.0033     641928     +184                                     -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/HandlerInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:384
+    0.0033     641928                                              >=> TRUE
+    0.0033     641736                                            >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/HandlerInterface.php'
+    0.0033     641736                                          >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/HandlerInterface.php'
+    0.0033     641736     -192                                 -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Handler/HandlerInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:322
+    0.0033     647080    +5344                                   -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/HandlerInterface.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:444
+    0.0033     646536                                        >=> TRUE
+    0.0033     646472                                      >=> NULL
+    0.0033     645680                                >=> TRUE
+    0.0033     645624                              >=> NULL
+    0.0033     646312                        >=> TRUE
+    0.0034     646232                      >=> NULL
+    0.0034     646600                >=> TRUE
+    0.0034     646544              >=> NULL
+    0.0034     646768     -312     -> Monolog\Handler\StreamHandler->__construct($stream = 'log/my.log', $level = 100, $bubble = ???, $filePermission = ???, $useLocking = ???) /var/www/mysite.local/index.php:16
+    0.0034     646768       +0       -> Monolog\Handler\StreamHandler->__construct($level = 100, $bubble = TRUE) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:45
+    0.0034     646768       +0         -> Monolog\Handler\StreamHandler->setLevel($level = 100) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:41
+    0.0034     646768       +0           -> Monolog\Logger::toMonologLevel($level = 100) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:127
+    0.0034     646768       +0             -> is_string(100) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:530
+    0.0034     646768                      >=> FALSE
+    0.0034     646768                    >=> 100
+    0.0034     646768       +0       -> is_resource('log/my.log') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:46
+    0.0034     646768                >=> FALSE
+    0.0034     646768       +0       -> is_string('log/my.log') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:48
+    0.0034     646768                >=> TRUE
+    0.0034     646768       +0       -> spl_autoload_call('Monolog\\Utils') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:49
+    0.0034     646808      +40         -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Utils') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:49
+    0.0034     646808       +0           -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Utils') /var/www/mysite.local/vendor/composer/ClassLoader.php:321
+    0.0034     646808       +0             -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Utils', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:351
+    0.0034     646808       +0               -> strtr('Monolog\\Utils', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0035     646848                        >=> 'Monolog/Utils'
+    0.0035     646856      +48               -> strrpos('Monolog\\Utils', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0035     646856                        >=> 7
+    0.0035     646856       +0               -> substr('Monolog\\Utils', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0035     646888                        >=> 'Monolog'
+    0.0035     646928      +72               -> substr('Monolog/Utils.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:382
+    0.0035     646968                        >=> 'Utils.php'
+    0.0035     647080     +152               -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Utils.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:384
+    0.0035     647080                        >=> TRUE
+    0.0035     646920                      >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Utils.php'
+    0.0035     646920                    >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Utils.php'
+    0.0035     646920     -160           -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Utils.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:322
+    0.0037     674208   +27288             -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:444
+    0.0037     673712                  >=> TRUE
+    0.0037     673672                >=> NULL
+    0.0037     673672     -536       -> Monolog\Utils::canonicalizePath($streamUrl = 'log/my.log') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:49
+    0.0037     673672       +0         -> substr('log/my.log', 0, 7) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:36
+    0.0037     673704                  >=> 'log/my.'
+    0.0037     673672       +0         -> strpos('log/my.log', '://') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:42
+    0.0037     673672                  >=> FALSE
+    0.0037     673672       +0         -> substr('log/my.log', 0, 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:47
+    0.0037     673672                  >=> 'l'
+    0.0037     673672       +0         -> substr('log/my.log', 1, 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:47
+    0.0037     673672                  >=> 'o'
+    0.0037     673672       +0         -> substr('log/my.log', 0, 2) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:47
+    0.0037     673704                  >=> 'lo'
+    0.0038     673672       +0         -> getcwd() /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:51
+    0.0038     673720                  >=> '/var/www/mysite.local'
+    0.0038     673736                >=> '/var/www/mysite.local/log/my.log'
+    0.0038     673736      +64     -> Monolog\Logger->pushHandler($handler = class Monolog\Handler\StreamHandler { protected $stream = NULL; protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = NULL; protected $level = 100; protected $bubble = TRUE; protected $formatter = NULL; protected $processors = array () }) /var/www/mysite.local/index.php:16
+    0.0038     674456     +720       -> array_unshift(array (), class Monolog\Handler\StreamHandler { protected $stream = NULL; protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = NULL; protected $level = 100; protected $bubble = TRUE; protected $formatter = NULL; protected $processors = array () }) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:183
+    0.0038     674832                >=> 1
+    0.0039     693568   +19112     -> include(/var/www/mysite.local/qrcode.php) /var/www/mysite.local/index.php:22
+    0.0039     693272       +0     -> qrcode->sms($phone = '5345345', $text = 'wgfwef') /var/www/mysite.local/index.php:48
+    0.0040     693320      +48     -> Monolog\Logger->debug($message = 510656, $context = ???) /var/www/mysite.local/index.php:51
+    0.0040     693320       +0       -> Monolog\Logger->addRecord($level = 100, $message = 510656, $context = array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:628
+    0.0040     693296      -24         -> Monolog\Logger::getLevelName($level = 100) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:298
+    0.0040     693296                  >=> 'DEBUG'
+    0.0040     693320      +24         -> reset(array (0 => class Monolog\Handler\StreamHandler { protected $stream = NULL; protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = NULL; protected $level = 100; protected $bubble = TRUE; protected $formatter = NULL; protected $processors = array (...) })) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:302
+    0.0040     693320                  >=> NULL
+    0.0040     693296      -24         -> current(array (0 => class Monolog\Handler\StreamHandler { protected $stream = NULL; protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = NULL; protected $level = 100; protected $bubble = TRUE; protected $formatter = NULL; protected $processors = array (...) })) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:303
+    0.0040     693296                  >=> class Monolog\Handler\StreamHandler { protected $stream = NULL; protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = NULL; protected $level = 100; protected $bubble = TRUE; protected $formatter = NULL; protected $processors = array () }
+    0.0040     693672     +376         -> Monolog\Handler\StreamHandler->isHandling($record = array ('level' => 100)) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:304
+    0.0040     693672                  >=> TRUE
+    0.0040     693296     -376         -> key(array (0 => class Monolog\Handler\StreamHandler { protected $stream = NULL; protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = NULL; protected $level = 100; protected $bubble = TRUE; protected $formatter = NULL; protected $processors = array (...) })) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:305
+    0.0040     693296                  >=> 0
+    0.0040     693376      +80         -> date_default_timezone_get() /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:317
+    0.0041     694024                  >=> 'UTC'
+    0.0041     694024     +648         -> DateTimeZone->__construct('UTC') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:317
+    0.0041     694024                  >=> NULL
+    0.0041     694048      +24         -> DateTime->__construct(NULL, class DateTimeZone { public $timezone_type = 3; public $timezone = 'UTC' }) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:324
+    0.0041     694392                  >=> NULL
+    0.0041     694392     +344         -> DateTime->setTimezone(class DateTimeZone { public $timezone_type = 3; public $timezone = 'UTC' }) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:326
+    0.0041     694392                  >=> class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }
+    0.0041     695576    +1184         -> current(array (0 => class Monolog\Handler\StreamHandler { protected $stream = NULL; protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = NULL; protected $level = 100; protected $bubble = TRUE; protected $formatter = NULL; protected $processors = array (...) })) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:343
+    0.0041     695576                  >=> class Monolog\Handler\StreamHandler { protected $stream = NULL; protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = NULL; protected $level = 100; protected $bubble = TRUE; protected $formatter = NULL; protected $processors = array () }
+    0.0041     695576       +0         -> Monolog\Handler\StreamHandler->handle($record = array ('message' => '510656', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:344
+    0.0041     695576       +0           -> Monolog\Handler\StreamHandler->isHandling($record = array ('message' => '510656', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:31
+    0.0041     695576                    >=> TRUE
+    0.0042     695576       +0           -> Monolog\Handler\StreamHandler->processRecord($record = array ('message' => '510656', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:35
+    0.0042     695576                    >=> array ('message' => '510656', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())
+    0.0042     695576       +0           -> Monolog\Handler\StreamHandler->getFormatter() /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+    0.0042     695576       +0             -> Monolog\Handler\StreamHandler->getDefaultFormatter() /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:113
+    0.0042     695576       +0               -> spl_autoload_call('Monolog\\Formatter\\LineFormatter') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:194
+    0.0042     695632      +56                 -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Formatter\\LineFormatter') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:194
+    0.0042     695632       +0                   -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Formatter\\LineFormatter') /var/www/mysite.local/vendor/composer/ClassLoader.php:321
+    0.0042     695632       +0                     -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Formatter\\LineFormatter', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:351
+    0.0042     695632       +0                       -> strtr('Monolog\\Formatter\\LineFormatter', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0042     695688                                >=> 'Monolog/Formatter/LineFormatter'
+    0.0042     695696      +64                       -> strrpos('Monolog\\Formatter\\LineFormatter', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0042     695696                                >=> 17
+    0.0042     695696       +0                       -> substr('Monolog\\Formatter\\LineFormatter', 0, 17) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0042     695744                                >=> 'Monolog\\Formatter'
+    0.0042     695792      +96                       -> strrpos('Monolog\\Formatter', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0042     695792                                >=> 7
+    0.0042     695792       +0                       -> substr('Monolog\\Formatter', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0043     695824                                >=> 'Monolog'
+    0.0043     695768      -24                       -> substr('Monolog/Formatter/LineFormatter.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:382
+    0.0043     695824                                >=> 'Formatter/LineFormatter.php'
+    0.0043     695952     +184                       -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Formatter/LineFormatter.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:384
+    0.0043     695952                                >=> TRUE
+    0.0043     695760                              >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Formatter/LineFormatter.php'
+    0.0043     695760                            >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Formatter/LineFormatter.php'
+    0.0043     695760     -192                   -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Formatter/LineFormatter.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:322
+    0.0045     727288   +31528                     -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:444
+    0.0045     727288       +0                       -> spl_autoload_call('Monolog\\Formatter\\NormalizerFormatter') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:24
+    0.0045     727352      +64                         -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Formatter\\NormalizerFormatter') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:24
+    0.0045     727352       +0                           -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Formatter\\NormalizerFormatter') /var/www/mysite.local/vendor/composer/ClassLoader.php:321
+    0.0045     727352       +0                             -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Formatter\\NormalizerFormatter', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:351
+    0.0045     727352       +0                               -> strtr('Monolog\\Formatter\\NormalizerFormatter', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0045     727416                                        >=> 'Monolog/Formatter/NormalizerFormatter'
+    0.0045     727432      +80                               -> strrpos('Monolog\\Formatter\\NormalizerFormatter', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0045     727432                                        >=> 17
+    0.0045     727432       +0                               -> substr('Monolog\\Formatter\\NormalizerFormatter', 0, 17) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0045     727480                                        >=> 'Monolog\\Formatter'
+    0.0045     727528      +96                               -> strrpos('Monolog\\Formatter', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0045     727528                                        >=> 7
+    0.0045     727528       +0                               -> substr('Monolog\\Formatter', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0045     727560                                        >=> 'Monolog'
+    0.0045     727504      -24                               -> substr('Monolog/Formatter/NormalizerFormatter.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:382
+    0.0046     727568                                        >=> 'Formatter/NormalizerFormatter.php'
+    0.0046     727696     +192                               -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:384
+    0.0046     727696                                        >=> TRUE
+    0.0046     727480                                      >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php'
+    0.0046     727480                                    >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php'
+    0.0046     727480     -216                           -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:322
+    0.0048     755808   +28328                             -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:444
+    0.0048     755808       +0                               -> spl_autoload_call('Monolog\\Formatter\\FormatterInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:22
+    0.0048     755872      +64                                 -> Composer\Autoload\ClassLoader->loadClass($class = 'Monolog\\Formatter\\FormatterInterface') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:22
+    0.0048     755872       +0                                   -> Composer\Autoload\ClassLoader->findFile($class = 'Monolog\\Formatter\\FormatterInterface') /var/www/mysite.local/vendor/composer/ClassLoader.php:321
+    0.0048     755872       +0                                     -> Composer\Autoload\ClassLoader->findFileWithExtension($class = 'Monolog\\Formatter\\FormatterInterface', $ext = '.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:351
+    0.0048     755872       +0                                       -> strtr('Monolog\\Formatter\\FormatterInterface', '\\', '/') /var/www/mysite.local/vendor/composer/ClassLoader.php:373
+    0.0048     755936                                                >=> 'Monolog/Formatter/FormatterInterface'
+    0.0048     755952      +80                                       -> strrpos('Monolog\\Formatter\\FormatterInterface', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0048     755952                                                >=> 17
+    0.0048     755952       +0                                       -> substr('Monolog\\Formatter\\FormatterInterface', 0, 17) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0048     756000                                                >=> 'Monolog\\Formatter'
+    0.0048     756048      +96                                       -> strrpos('Monolog\\Formatter', '\\') /var/www/mysite.local/vendor/composer/ClassLoader.php:378
+    0.0048     756048                                                >=> 7
+    0.0048     756048       +0                                       -> substr('Monolog\\Formatter', 0, 7) /var/www/mysite.local/vendor/composer/ClassLoader.php:379
+    0.0049     756080                                                >=> 'Monolog'
+    0.0049     756024      -24                                       -> substr('Monolog/Formatter/FormatterInterface.php', 8) /var/www/mysite.local/vendor/composer/ClassLoader.php:382
+    0.0049     756088                                                >=> 'Formatter/FormatterInterface.php'
+    0.0049     756216     +192                                       -> file_exists('/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Formatter/FormatterInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:384
+    0.0049     756216                                                >=> TRUE
+    0.0049     756000                                              >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Formatter/FormatterInterface.php'
+    0.0049     756000                                            >=> '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Formatter/FormatterInterface.php'
+    0.0049     756000     -216                                   -> Composer\Autoload\includeFile($file = '/var/www/mysite.local/vendor/composer/../monolog/monolog/src/Monolog/Formatter/FormatterInterface.php') /var/www/mysite.local/vendor/composer/ClassLoader.php:322
+    0.0049     759304    +3304                                     -> include(/var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/FormatterInterface.php) /var/www/mysite.local/vendor/composer/ClassLoader.php:444
+    0.0049     758792                                          >=> TRUE
+    0.0049     758728                                        >=> NULL
+    0.0049     758032                                  >=> TRUE
+    0.0049     757968                                >=> NULL
+    0.0049     757352                          >=> TRUE
+    0.0049     757296                        >=> NULL
+    0.0050     757424    -1880               -> Monolog\Formatter\LineFormatter->__construct($format = ???, $dateFormat = ???, $allowInlineLineBreaks = ???, $ignoreEmptyContextAndExtra = ???) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:194
+    0.0050     757424       +0                 -> Monolog\Formatter\LineFormatter->__construct($dateFormat = NULL) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:44
+    0.0050     757424       +0                   -> function_exists('json_encode') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:34
+    0.0050     757424                            >=> TRUE
+    0.0050     757424                      >=> class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d H:i:s' }
+    0.0050     757800                    >=> class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d H:i:s' }
+    0.0050     757800     +376           -> Monolog\Formatter\LineFormatter->format($record = array ('message' => '510656', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+    0.0050     757800       +0             -> Monolog\Formatter\LineFormatter->format($record = array ('message' => '510656', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:70
+    0.0050     757800       +0               -> Monolog\Formatter\LineFormatter->normalize($data = array ('message' => '510656', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ()), $depth = ???) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:44
+    0.0050     757800       +0                 -> is_scalar(array ('message' => '510656', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0051     757800                          >=> FALSE
+    0.0051     757800       +0                 -> is_array(array ('message' => '510656', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:78
+    0.0051     757800                          >=> TRUE
+    0.0051     757800       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = '510656', $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0051     757800       +0                   -> is_scalar('510656') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0051     757800                            >=> TRUE
+    0.0051     757800       +0                   -> is_float('510656') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:66
+    0.0051     757800                            >=> FALSE
+    0.0051     757800                          >=> '510656'
+    0.0051     758176     +376                 -> Monolog\Formatter\LineFormatter->normalize($data = array (), $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0051     758176       +0                   -> is_scalar(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0051     758176                            >=> FALSE
+    0.0051     758176       +0                   -> is_array(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:78
+    0.0051     758176                            >=> TRUE
+    0.0051     758176                          >=> array ()
+    0.0051     758176       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = 100, $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0051     758176       +0                   -> is_scalar(100) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0051     758176                            >=> TRUE
+    0.0051     758176       +0                   -> is_float(100) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:66
+    0.0052     758176                            >=> FALSE
+    0.0052     758176                          >=> 100
+    0.0052     758176       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = 'DEBUG', $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0052     758176       +0                   -> is_scalar('DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0052     758176                            >=> TRUE
+    0.0052     758176       +0                   -> is_float('DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:66
+    0.0052     758176                            >=> FALSE
+    0.0052     758176                          >=> 'DEBUG'
+    0.0052     758176       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = 'Memory usage', $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0052     758176       +0                   -> is_scalar('Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0052     758176                            >=> TRUE
+    0.0052     758176       +0                   -> is_float('Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:66
+    0.0052     758176                            >=> FALSE
+    0.0052     758176                          >=> 'Memory usage'
+    0.0052     758176       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }, $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0052     758176       +0                   -> is_scalar(class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0052     758176                            >=> FALSE
+    0.0052     758176       +0                   -> is_array(class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:78
+    0.0052     758176                            >=> FALSE
+    0.0053     758176       +0                   -> DateTime->format('Y-m-d H:i:s') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:95
+    0.0053     758432                            >=> '2020-09-21 17:57:09'
+    0.0053     758432                          >=> '2020-09-21 17:57:09'
+    0.0053     758432     +256                 -> Monolog\Formatter\LineFormatter->normalize($data = array (), $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0053     758432       +0                   -> is_scalar(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0053     758432                            >=> FALSE
+    0.0053     758432       +0                   -> is_array(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:78
+    0.0053     758432                            >=> TRUE
+    0.0053     758432                          >=> array ()
+    0.0053     758432                        >=> array ('message' => '510656', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => '2020-09-21 17:57:09', 'extra' => array ())
+    0.0053     758432                      >=> array ('message' => '510656', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => '2020-09-21 17:57:09', 'extra' => array ())
+    0.0053     758472      +40             -> strpos('[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n', '%message%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0053     758472                      >=> 37
+    0.0053     758472       +0             -> Monolog\Formatter\LineFormatter->stringify($value = '510656') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0053     758472       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = '510656') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0053     758472       +0                 -> is_bool('510656') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:154
+    0.0053     758472                          >=> FALSE
+    0.0053     758472       +0                 -> is_scalar('510656') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:158
+    0.0053     758472                          >=> TRUE
+    0.0053     758472                        >=> '510656'
+    0.0054     758472       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '510656') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0054     758472       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '510656') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:179
+    0.0054     758472                          >=> '510656'
+    0.0054     758472                        >=> '510656'
+    0.0054     758472                      >=> '510656'
+    0.0054     758472       +0             -> str_replace('%message%', '510656', '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0054     758568                      >=> '[%datetime%] %channel%.%level_name%: 510656 %context% %extra%\n'
+    0.0054     758568      +96             -> strpos('[%datetime%] %channel%.%level_name%: 510656 %context% %extra%\n', '%context%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0054     758568                      >=> 44
+    0.0054     758568       +0             -> Monolog\Formatter\LineFormatter->stringify($value = array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0054     758568       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0054     758568       +0                 -> is_bool(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:154
+    0.0054     758568                          >=> FALSE
+    0.0054     758568       +0                 -> is_scalar(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:158
+    0.0054     758568                          >=> FALSE
+    0.0054     758568       +0                 -> version_compare('7.2.33', '5.4.0', '>=') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:162
+    0.0054     758568                          >=> TRUE
+    0.0054     758568       +0                 -> Monolog\Formatter\LineFormatter->toJson($data = array (), $ignoreErrors = TRUE) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:163
+    0.0054     758568       +0                   -> Monolog\Utils::jsonEncode($data = array (), $encodeFlags = NULL, $ignoreErrors = TRUE) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:178
+    0.0054     758568       +0                     -> version_compare('7.2.33', '5.4.0', '>=') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:67
+    0.0054     758568                              >=> TRUE
+    0.0055     758568       +0                     -> json_encode(array (), 320) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:72
+    0.0055     758824                              >=> '[]'
+    0.0055     758824                            >=> '[]'
+    0.0055     758824                          >=> '[]'
+    0.0055     758824                        >=> '[]'
+    0.0055     758824     +256               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '[]') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0055     758824       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '[]') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:179
+    0.0055     758824                          >=> '[]'
+    0.0055     758824                        >=> '[]'
+    0.0055     758824                      >=> '[]'
+    0.0055     758824       +0             -> str_replace('%context%', '[]', '[%datetime%] %channel%.%level_name%: 510656 %context% %extra%\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0055     758904                      >=> '[%datetime%] %channel%.%level_name%: 510656 [] %extra%\n'
+    0.0055     758544     -280             -> strpos('[%datetime%] %channel%.%level_name%: 510656 [] %extra%\n', '%level%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0055     758544                      >=> FALSE
+    0.0055     758552       +8             -> strpos('[%datetime%] %channel%.%level_name%: 510656 [] %extra%\n', '%level_name%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0055     758552                      >=> 23
+    0.0055     758552       +0             -> Monolog\Formatter\LineFormatter->stringify($value = 'DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0055     758552       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = 'DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0055     758552       +0                 -> is_bool('DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:154
+    0.0055     758552                          >=> FALSE
+    0.0055     758552       +0                 -> is_scalar('DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:158
+    0.0055     758552                          >=> TRUE
+    0.0055     758552                        >=> 'DEBUG'
+    0.0055     758552       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = 'DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0055     758552       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', 'DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:179
+    0.0056     758552                          >=> 'DEBUG'
+    0.0056     758552                        >=> 'DEBUG'
+    0.0056     758552                      >=> 'DEBUG'
+    0.0056     758552       +0             -> str_replace('%level_name%', 'DEBUG', '[%datetime%] %channel%.%level_name%: 510656 [] %extra%\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0056     758632                      >=> '[%datetime%] %channel%.DEBUG: 510656 [] %extra%\n'
+    0.0056     758552       +0             -> strpos('[%datetime%] %channel%.DEBUG: 510656 [] %extra%\n', '%channel%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0056     758552                      >=> 13
+    0.0056     758552       +0             -> Monolog\Formatter\LineFormatter->stringify($value = 'Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0056     758552       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = 'Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0056     758552       +0                 -> is_bool('Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:154
+    0.0056     758552                          >=> FALSE
+    0.0056     758552       +0                 -> is_scalar('Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:158
+    0.0056     758552                          >=> TRUE
+    0.0056     758552                        >=> 'Memory usage'
+    0.0056     758552       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = 'Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0056     758552       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', 'Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:179
+    0.0056     758552                          >=> 'Memory usage'
+    0.0056     758552                        >=> 'Memory usage'
+    0.0056     758552                      >=> 'Memory usage'
+    0.0056     758552       +0             -> str_replace('%channel%', 'Memory usage', '[%datetime%] %channel%.DEBUG: 510656 [] %extra%\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0056     758648                      >=> '[%datetime%] Memory usage.DEBUG: 510656 [] %extra%\n'
+    0.0056     758568      +16             -> strpos('[%datetime%] Memory usage.DEBUG: 510656 [] %extra%\n', '%datetime%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0056     758568                      >=> 1
+    0.0056     758568       +0             -> Monolog\Formatter\LineFormatter->stringify($value = '2020-09-21 17:57:09') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0056     758568       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = '2020-09-21 17:57:09') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0057     758568       +0                 -> is_bool('2020-09-21 17:57:09') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:154
+    0.0057     758568                          >=> FALSE
+    0.0057     758568       +0                 -> is_scalar('2020-09-21 17:57:09') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:158
+    0.0057     758568                          >=> TRUE
+    0.0057     758568                        >=> '2020-09-21 17:57:09'
+    0.0057     758568       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '2020-09-21 17:57:09') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0057     758568       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '2020-09-21 17:57:09') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:179
+    0.0057     758568                          >=> '2020-09-21 17:57:09'
+    0.0057     758568                        >=> '2020-09-21 17:57:09'
+    0.0057     758568                      >=> '2020-09-21 17:57:09'
+    0.0057     758568       +0             -> str_replace('%datetime%', '2020-09-21 17:57:09', '[%datetime%] Memory usage.DEBUG: 510656 [] %extra%\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0057     758664                      >=> '[2020-09-21 17:57:09] Memory usage.DEBUG: 510656 [] %extra%\n'
+    0.0057     758560       -8             -> strpos('[2020-09-21 17:57:09] Memory usage.DEBUG: 510656 [] %extra%\n', '%extra%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0057     758560                      >=> 52
+    0.0057     758560       +0             -> Monolog\Formatter\LineFormatter->stringify($value = array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0057     758560       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0058     758560       +0                 -> is_bool(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:154
+    0.0058     758560                          >=> FALSE
+    0.0058     758560       +0                 -> is_scalar(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:158
+    0.0058     758560                          >=> FALSE
+    0.0058     758560       +0                 -> version_compare('7.2.33', '5.4.0', '>=') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:162
+    0.0058     758560                          >=> TRUE
+    0.0058     758560       +0                 -> Monolog\Formatter\LineFormatter->toJson($data = array (), $ignoreErrors = TRUE) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:163
+    0.0058     758560       +0                   -> Monolog\Utils::jsonEncode($data = array (), $encodeFlags = NULL, $ignoreErrors = TRUE) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:178
+    0.0058     758560       +0                     -> version_compare('7.2.33', '5.4.0', '>=') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:67
+    0.0058     758560                              >=> TRUE
+    0.0058     758560       +0                     -> json_encode(array (), 320) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:72
+    0.0058     758816                              >=> '[]'
+    0.0058     758816                            >=> '[]'
+    0.0058     758816                          >=> '[]'
+    0.0058     758816                        >=> '[]'
+    0.0058     758816     +256               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '[]') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0058     758816       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '[]') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:179
+    0.0058     758816                          >=> '[]'
+    0.0058     758816                        >=> '[]'
+    0.0058     758816                      >=> '[]'
+    0.0058     758816       +0             -> str_replace('%extra%', '[]', '[2020-09-21 17:57:09] Memory usage.DEBUG: 510656 [] %extra%\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0058     758896                      >=> '[2020-09-21 17:57:09] Memory usage.DEBUG: 510656 [] []\n'
+    0.0058     758512     -304             -> strpos('[2020-09-21 17:57:09] Memory usage.DEBUG: 510656 [] []\n', '%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:108
+    0.0058     758512                      >=> FALSE
+    0.0058     757880                    >=> '[2020-09-21 17:57:09] Memory usage.DEBUG: 510656 [] []\n'
+    0.0059     758256     -256           -> Monolog\Handler\StreamHandler->write($record = array ('message' => '510656', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array (), 'formatted' => '[2020-09-21 17:57:09] Memory usage.DEBUG: 510656 [] []\n')) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:39
+    0.0059     758256       +0             -> is_resource(NULL) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:95
+    0.0059     758256                      >=> FALSE
+    0.0059     758256       +0             -> Monolog\Handler\StreamHandler->createDir() /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:99
+    0.0059     758256       +0               -> Monolog\Handler\StreamHandler->getDirFromStream($stream = '/var/www/mysite.local/log/my.log') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:167
+    0.0059     758256       +0                 -> strpos('/var/www/mysite.local/log/my.log', '://') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:148
+    0.0059     758256                          >=> FALSE
+    0.0059     758256       +0                 -> dirname('/var/www/mysite.local/log/my.log') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:150
+    0.0059     758320                          >=> '/var/www/mysite.local/log'
+    0.0059     758320                        >=> '/var/www/mysite.local/log'
+    0.0059     758320      +64               -> is_dir('/var/www/mysite.local/log') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:168
+    0.0059     758352                        >=> TRUE
+    0.0059     758664     +344             -> set_error_handler(array (0 => class Monolog\Handler\StreamHandler { protected $stream = NULL; protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $formatter = class Monolog\Formatter\LineFormatter { ... }; protected $processors = array (...) }, 1 => 'customErrorHandler')) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:101
+    0.0059     758664                      >=> NULL
+    0.0059     758664       +0             -> fopen('/var/www/mysite.local/log/my.log', 'a') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:102
+    0.0060     759256                      >=> resource(21) of type (stream)
+    0.0060     759256     +592             -> restore_error_handler() /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:106
+    0.0060     758880                      >=> TRUE
+    0.0060     758880     -376             -> is_resource(resource(21) of type (stream)) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:107
+    0.0060     758880                      >=> TRUE
+    0.0060     758880       +0             -> Monolog\Handler\StreamHandler->streamWrite($stream = resource(21) of type (stream), $record = array ('message' => '510656', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.869728'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array (), 'formatted' => '[2020-09-21 17:57:09] Memory usage.DEBUG: 510656 [] []\n')) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:119
+    0.0060     758880       +0               -> fwrite(resource(21) of type (stream), '[2020-09-21 17:57:09] Memory usage.DEBUG: 510656 [] []\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:133
+    0.0060     758880                        >=> 55
+    0.0060     758424                  >=> FALSE
+    0.0060     758448     -432         -> next(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(21) of type (stream); protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $formatter = class Monolog\Formatter\LineFormatter { ... }; protected $processors = array (...) })) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:348
+    0.0060     758448                  >=> NULL
+    0.0060     758424      -24         -> current(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(21) of type (stream); protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $formatter = class Monolog\Formatter\LineFormatter { ... }; protected $processors = array (...) })) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:343
+    0.0060     758424                  >=> FALSE
+    0.0060     756920                >=> TRUE
+    0.0060     756920    -1504     -> Monolog\Logger->debug($message = 587528, $context = ???) /var/www/mysite.local/index.php:52
+    0.0060     756920       +0       -> Monolog\Logger->addRecord($level = 100, $message = 587528, $context = array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:628
+    0.0061     756920       +0         -> Monolog\Logger::getLevelName($level = 100) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:298
+    0.0061     756920                  >=> 'DEBUG'
+    0.0061     756944      +24         -> reset(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(21) of type (stream); protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $formatter = class Monolog\Formatter\LineFormatter { ... }; protected $processors = array (...) })) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:302
+    0.0061     756944                  >=> NULL
+    0.0061     756920      -24         -> current(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(21) of type (stream); protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $formatter = class Monolog\Formatter\LineFormatter { ... }; protected $processors = array (...) })) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:303
+    0.0061     756920                  >=> class Monolog\Handler\StreamHandler { protected $stream = resource(21) of type (stream); protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $formatter = class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d H:i:s' }; protected $processors = array () }
+    0.0061     757296     +376         -> Monolog\Handler\StreamHandler->isHandling($record = array ('level' => 100)) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:304
+    0.0061     757296                  >=> TRUE
+    0.0061     756920     -376         -> key(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(21) of type (stream); protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $formatter = class Monolog\Formatter\LineFormatter { ... }; protected $processors = array (...) })) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:305
+    0.0061     756920                  >=> 0
+    0.0061     756976      +56         -> DateTime->__construct(NULL, class DateTimeZone { public $timezone_type = 3; public $timezone = 'UTC' }) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:324
+    0.0061     757240                  >=> NULL
+    0.0061     757240     +264         -> DateTime->setTimezone(class DateTimeZone { public $timezone_type = 3; public $timezone = 'UTC' }) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:326
+    0.0061     757240                  >=> class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }
+    0.0062     758424    +1184         -> current(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(21) of type (stream); protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $formatter = class Monolog\Formatter\LineFormatter { ... }; protected $processors = array (...) })) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:343
+    0.0062     758424                  >=> class Monolog\Handler\StreamHandler { protected $stream = resource(21) of type (stream); protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $formatter = class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d H:i:s' }; protected $processors = array () }
+    0.0062     758424       +0         -> Monolog\Handler\StreamHandler->handle($record = array ('message' => '587528', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:344
+    0.0062     758424       +0           -> Monolog\Handler\StreamHandler->isHandling($record = array ('message' => '587528', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:31
+    0.0062     758424                    >=> TRUE
+    0.0062     758424       +0           -> Monolog\Handler\StreamHandler->processRecord($record = array ('message' => '587528', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:35
+    0.0062     758424                    >=> array ('message' => '587528', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())
+    0.0062     758424       +0           -> Monolog\Handler\StreamHandler->getFormatter() /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+    0.0062     758424                    >=> class Monolog\Formatter\LineFormatter { protected $format = '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n'; protected $allowInlineLineBreaks = FALSE; protected $ignoreEmptyContextAndExtra = FALSE; protected $includeStacktraces = NULL; protected $dateFormat = 'Y-m-d H:i:s' }
+    0.0062     758424       +0           -> Monolog\Formatter\LineFormatter->format($record = array ('message' => '587528', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:37
+    0.0062     758424       +0             -> Monolog\Formatter\LineFormatter->format($record = array ('message' => '587528', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:70
+    0.0063     758424       +0               -> Monolog\Formatter\LineFormatter->normalize($data = array ('message' => '587528', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ()), $depth = ???) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:44
+    0.0063     758424       +0                 -> is_scalar(array ('message' => '587528', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0063     758424                          >=> FALSE
+    0.0063     758424       +0                 -> is_array(array ('message' => '587528', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array ())) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:78
+    0.0063     758424                          >=> TRUE
+    0.0063     758424       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = '587528', $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0063     758424       +0                   -> is_scalar('587528') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0063     758424                            >=> TRUE
+    0.0063     758424       +0                   -> is_float('587528') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:66
+    0.0063     758424                            >=> FALSE
+    0.0063     758424                          >=> '587528'
+    0.0063     758800     +376                 -> Monolog\Formatter\LineFormatter->normalize($data = array (), $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0063     758800       +0                   -> is_scalar(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0063     758800                            >=> FALSE
+    0.0063     758800       +0                   -> is_array(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:78
+    0.0064     758800                            >=> TRUE
+    0.0064     758800                          >=> array ()
+    0.0064     758800       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = 100, $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0064     758800       +0                   -> is_scalar(100) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0064     758800                            >=> TRUE
+    0.0064     758800       +0                   -> is_float(100) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:66
+    0.0064     758800                            >=> FALSE
+    0.0064     758800                          >=> 100
+    0.0064     758800       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = 'DEBUG', $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0064     758800       +0                   -> is_scalar('DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0064     758800                            >=> TRUE
+    0.0064     758800       +0                   -> is_float('DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:66
+    0.0064     758800                            >=> FALSE
+    0.0064     758800                          >=> 'DEBUG'
+    0.0064     758800       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = 'Memory usage', $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0064     758800       +0                   -> is_scalar('Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0064     758800                            >=> TRUE
+    0.0064     758800       +0                   -> is_float('Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:66
+    0.0064     758800                            >=> FALSE
+    0.0064     758800                          >=> 'Memory usage'
+    0.0064     758800       +0                 -> Monolog\Formatter\LineFormatter->normalize($data = class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }, $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0065     758800       +0                   -> is_scalar(class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0065     758800                            >=> FALSE
+    0.0065     758800       +0                   -> is_array(class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:78
+    0.0065     758800                            >=> FALSE
+    0.0065     758800       +0                   -> DateTime->format('Y-m-d H:i:s') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:95
+    0.0065     759056                            >=> '2020-09-21 17:57:09'
+    0.0065     759056                          >=> '2020-09-21 17:57:09'
+    0.0065     759056     +256                 -> Monolog\Formatter\LineFormatter->normalize($data = array (), $depth = 1) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:88
+    0.0065     759056       +0                   -> is_scalar(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:65
+    0.0065     759056                            >=> FALSE
+    0.0065     759056       +0                   -> is_array(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:78
+    0.0065     759056                            >=> TRUE
+    0.0065     759056                          >=> array ()
+    0.0065     759056                        >=> array ('message' => '587528', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => '2020-09-21 17:57:09', 'extra' => array ())
+    0.0065     759056                      >=> array ('message' => '587528', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => '2020-09-21 17:57:09', 'extra' => array ())
+    0.0065     759096      +40             -> strpos('[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n', '%message%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0065     759096                      >=> 37
+    0.0065     759096       +0             -> Monolog\Formatter\LineFormatter->stringify($value = '587528') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0066     759096       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = '587528') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0066     759096       +0                 -> is_bool('587528') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:154
+    0.0066     759096                          >=> FALSE
+    0.0066     759096       +0                 -> is_scalar('587528') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:158
+    0.0066     759096                          >=> TRUE
+    0.0066     759096                        >=> '587528'
+    0.0066     759096       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '587528') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0066     759096       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '587528') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:179
+    0.0066     759096                          >=> '587528'
+    0.0066     759096                        >=> '587528'
+    0.0066     759096                      >=> '587528'
+    0.0066     759096       +0             -> str_replace('%message%', '587528', '[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0066     759192                      >=> '[%datetime%] %channel%.%level_name%: 587528 %context% %extra%\n'
+    0.0066     759192      +96             -> strpos('[%datetime%] %channel%.%level_name%: 587528 %context% %extra%\n', '%context%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0066     759192                      >=> 44
+    0.0066     759192       +0             -> Monolog\Formatter\LineFormatter->stringify($value = array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0066     759192       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0066     759192       +0                 -> is_bool(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:154
+    0.0066     759192                          >=> FALSE
+    0.0066     759192       +0                 -> is_scalar(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:158
+    0.0067     759192                          >=> FALSE
+    0.0067     759192       +0                 -> version_compare('7.2.33', '5.4.0', '>=') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:162
+    0.0067     759192                          >=> TRUE
+    0.0067     759192       +0                 -> Monolog\Formatter\LineFormatter->toJson($data = array (), $ignoreErrors = TRUE) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:163
+    0.0067     759192       +0                   -> Monolog\Utils::jsonEncode($data = array (), $encodeFlags = NULL, $ignoreErrors = TRUE) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:178
+    0.0067     759192       +0                     -> version_compare('7.2.33', '5.4.0', '>=') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:67
+    0.0067     759192                              >=> TRUE
+    0.0067     759192       +0                     -> json_encode(array (), 320) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:72
+    0.0067     759448                              >=> '[]'
+    0.0067     759448                            >=> '[]'
+    0.0067     759448                          >=> '[]'
+    0.0067     759448                        >=> '[]'
+    0.0067     759448     +256               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '[]') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0067     759448       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '[]') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:179
+    0.0067     759448                          >=> '[]'
+    0.0067     759448                        >=> '[]'
+    0.0067     759448                      >=> '[]'
+    0.0067     759448       +0             -> str_replace('%context%', '[]', '[%datetime%] %channel%.%level_name%: 587528 %context% %extra%\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0067     759528                      >=> '[%datetime%] %channel%.%level_name%: 587528 [] %extra%\n'
+    0.0067     759168     -280             -> strpos('[%datetime%] %channel%.%level_name%: 587528 [] %extra%\n', '%level%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0068     759168                      >=> FALSE
+    0.0068     759176       +8             -> strpos('[%datetime%] %channel%.%level_name%: 587528 [] %extra%\n', '%level_name%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0068     759176                      >=> 23
+    0.0068     759176       +0             -> Monolog\Formatter\LineFormatter->stringify($value = 'DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0068     759176       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = 'DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0068     759176       +0                 -> is_bool('DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:154
+    0.0068     759176                          >=> FALSE
+    0.0068     759176       +0                 -> is_scalar('DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:158
+    0.0068     759176                          >=> TRUE
+    0.0068     759176                        >=> 'DEBUG'
+    0.0068     759176       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = 'DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0068     759176       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', 'DEBUG') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:179
+    0.0068     759176                          >=> 'DEBUG'
+    0.0068     759176                        >=> 'DEBUG'
+    0.0068     759176                      >=> 'DEBUG'
+    0.0068     759176       +0             -> str_replace('%level_name%', 'DEBUG', '[%datetime%] %channel%.%level_name%: 587528 [] %extra%\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0068     759256                      >=> '[%datetime%] %channel%.DEBUG: 587528 [] %extra%\n'
+    0.0068     759176       +0             -> strpos('[%datetime%] %channel%.DEBUG: 587528 [] %extra%\n', '%channel%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0068     759176                      >=> 13
+    0.0068     759176       +0             -> Monolog\Formatter\LineFormatter->stringify($value = 'Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0068     759176       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = 'Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0068     759176       +0                 -> is_bool('Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:154
+    0.0068     759176                          >=> FALSE
+    0.0068     759176       +0                 -> is_scalar('Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:158
+    0.0068     759176                          >=> TRUE
+    0.0068     759176                        >=> 'Memory usage'
+    0.0069     759176       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = 'Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0069     759176       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', 'Memory usage') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:179
+    0.0069     759176                          >=> 'Memory usage'
+    0.0069     759176                        >=> 'Memory usage'
+    0.0069     759176                      >=> 'Memory usage'
+    0.0069     759176       +0             -> str_replace('%channel%', 'Memory usage', '[%datetime%] %channel%.DEBUG: 587528 [] %extra%\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0069     759272                      >=> '[%datetime%] Memory usage.DEBUG: 587528 [] %extra%\n'
+    0.0069     759192      +16             -> strpos('[%datetime%] Memory usage.DEBUG: 587528 [] %extra%\n', '%datetime%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0069     759192                      >=> 1
+    0.0069     759192       +0             -> Monolog\Formatter\LineFormatter->stringify($value = '2020-09-21 17:57:09') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0069     759192       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = '2020-09-21 17:57:09') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0069     759192       +0                 -> is_bool('2020-09-21 17:57:09') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:154
+    0.0069     759192                          >=> FALSE
+    0.0069     759192       +0                 -> is_scalar('2020-09-21 17:57:09') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:158
+    0.0069     759192                          >=> TRUE
+    0.0069     759192                        >=> '2020-09-21 17:57:09'
+    0.0069     759192       +0               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '2020-09-21 17:57:09') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0069     759192       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '2020-09-21 17:57:09') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:179
+    0.0069     759192                          >=> '2020-09-21 17:57:09'
+    0.0069     759192                        >=> '2020-09-21 17:57:09'
+    0.0069     759192                      >=> '2020-09-21 17:57:09'
+    0.0069     759192       +0             -> str_replace('%datetime%', '2020-09-21 17:57:09', '[%datetime%] Memory usage.DEBUG: 587528 [] %extra%\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0069     759288                      >=> '[2020-09-21 17:57:09] Memory usage.DEBUG: 587528 [] %extra%\n'
+    0.0069     759184       -8             -> strpos('[2020-09-21 17:57:09] Memory usage.DEBUG: 587528 [] %extra%\n', '%extra%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:102
+    0.0070     759184                      >=> 52
+    0.0070     759184       +0             -> Monolog\Formatter\LineFormatter->stringify($value = array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0070     759184       +0               -> Monolog\Formatter\LineFormatter->convertToString($data = array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0070     759184       +0                 -> is_bool(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:154
+    0.0070     759184                          >=> FALSE
+    0.0070     759184       +0                 -> is_scalar(array ()) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:158
+    0.0070     759184                          >=> FALSE
+    0.0070     759184       +0                 -> version_compare('7.2.33', '5.4.0', '>=') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:162
+    0.0070     759184                          >=> TRUE
+    0.0070     759184       +0                 -> Monolog\Formatter\LineFormatter->toJson($data = array (), $ignoreErrors = TRUE) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:163
+    0.0070     759184       +0                   -> Monolog\Utils::jsonEncode($data = array (), $encodeFlags = NULL, $ignoreErrors = TRUE) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/NormalizerFormatter.php:178
+    0.0070     759184       +0                     -> version_compare('7.2.33', '5.4.0', '>=') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:67
+    0.0070     759184                              >=> TRUE
+    0.0070     759184       +0                     -> json_encode(array (), 320) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Utils.php:72
+    0.0070     759440                              >=> '[]'
+    0.0070     759440                            >=> '[]'
+    0.0070     759440                          >=> '[]'
+    0.0070     759440                        >=> '[]'
+    0.0070     759440     +256               -> Monolog\Formatter\LineFormatter->replaceNewlines($str = '[]') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:127
+    0.0070     759440       +0                 -> str_replace(array (0 => '\r\n', 1 => '\r', 2 => '\n'), ' ', '[]') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:179
+    0.0070     759440                          >=> '[]'
+    0.0070     759440                        >=> '[]'
+    0.0070     759440                      >=> '[]'
+    0.0070     759440       +0             -> str_replace('%extra%', '[]', '[2020-09-21 17:57:09] Memory usage.DEBUG: 587528 [] %extra%\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:103
+    0.0071     759520                      >=> '[2020-09-21 17:57:09] Memory usage.DEBUG: 587528 [] []\n'
+    0.0071     759136     -304             -> strpos('[2020-09-21 17:57:09] Memory usage.DEBUG: 587528 [] []\n', '%') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Formatter/LineFormatter.php:108
+    0.0071     759136                      >=> FALSE
+    0.0071     758504                    >=> '[2020-09-21 17:57:09] Memory usage.DEBUG: 587528 [] []\n'
+    0.0071     758880     -256           -> Monolog\Handler\StreamHandler->write($record = array ('message' => '587528', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array (), 'formatted' => '[2020-09-21 17:57:09] Memory usage.DEBUG: 587528 [] []\n')) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractProcessingHandler.php:39
+    0.0071     758880       +0             -> is_resource(resource(21) of type (stream)) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:95
+    0.0071     758880                      >=> TRUE
+    0.0071     758880       +0             -> Monolog\Handler\StreamHandler->streamWrite($stream = resource(21) of type (stream), $record = array ('message' => '587528', 'context' => array (), 'level' => 100, 'level_name' => 'DEBUG', 'channel' => 'Memory usage', 'datetime' => class DateTime { public $date = '2020-09-21 17:57:09.871776'; public $timezone_type = 3; public $timezone = 'UTC' }, 'extra' => array (), 'formatted' => '[2020-09-21 17:57:09] Memory usage.DEBUG: 587528 [] []\n')) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:119
+    0.0071     758880       +0               -> fwrite(resource(21) of type (stream), '[2020-09-21 17:57:09] Memory usage.DEBUG: 587528 [] []\n') /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:133
+    0.0071     758880                        >=> 55
+    0.0071     758424                  >=> FALSE
+    0.0071     758448     -432         -> next(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(21) of type (stream); protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $formatter = class Monolog\Formatter\LineFormatter { ... }; protected $processors = array (...) })) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:348
+    0.0071     758448                  >=> NULL
+    0.0071     758424      -24         -> current(array (0 => class Monolog\Handler\StreamHandler { protected $stream = resource(21) of type (stream); protected $url = '/var/www/mysite.local/log/my.log'; private $errorMessage = NULL; protected $filePermission = NULL; protected $useLocking = FALSE; private $dirCreated = TRUE; protected $level = 100; protected $bubble = TRUE; protected $formatter = class Monolog\Formatter\LineFormatter { ... }; protected $processors = array (...) })) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Logger.php:343
+    0.0071     758424                  >=> FALSE
+    0.0071     756920                >=> TRUE
+    0.0072     756920    -1504     -> qrcode->get_link($size = '250', $EC_level = ???, $margin = ???) /var/www/mysite.local/index.php:105
+    0.0072     756920       +0       -> urlencode('SMSTO:5345345:wgfwef') /var/www/mysite.local/qrcode.php:105
+    0.0072     756976                >=> 'SMSTO%3A5345345%3Awgfwef'
+    0.0072     757056              >=> 'http://chart.apis.google.com/chart?chs=250x250&cht=qr&chld=L|0&chl=SMSTO%3A5345345%3Awgfwef'
+    0.0072     722480   -34440   -> Monolog\Handler\StreamHandler->__destruct() /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:0
+    0.0072     722480       +0     -> Monolog\Handler\StreamHandler->close() /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/AbstractHandler.php:170
+    0.0072     722480       +0       -> is_resource(resource(21) of type (stream)) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:63
+    0.0072     722480                >=> TRUE
+    0.0072     722480       +0       -> fclose(resource(21) of type (stream)) /var/www/mysite.local/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:64
+    0.0072     722024                >=> TRUE
+    0.0073     722000            >=> NULL
+    0.0074     634080
+TRACE END   [2020-09-21 17:57:09]
+
